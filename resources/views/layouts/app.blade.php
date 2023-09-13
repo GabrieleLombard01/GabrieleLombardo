@@ -72,7 +72,8 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ url('home') }}">{{ __('Progetti') }}</a>
+                                    <a class="dropdown-item" href="{{ url('projects') }}">{{ __('Progetti') }}</a>
+                                    <a class="dropdown-item" href="{{ url('cv') }}">{{ __('Curriculum') }}</a>
                                     <a class="dropdown-item" href="{{ url('profile') }}">{{ __('Profile') }}</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
