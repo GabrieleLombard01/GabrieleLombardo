@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 50);
             $table->text('description');
+            $table->string('image')->nullable;
             $table->string('qualification', 50);
             $table->string('contract', 80);
             $table->string('location', 80);

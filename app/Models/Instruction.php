@@ -11,4 +11,6 @@ class Instruction extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
+    protected $fillable = ['title', 'description', 'image', 'qualification_study', 'course_study', 'valuation', 'start_date', 'end_date'];
 }
