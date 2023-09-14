@@ -16,6 +16,9 @@ class SkillsSeeder extends Seeder
     {
         for ($i = 1; $i <= 5; $i++) {
             $skills = new Skills();
+            $skills->title = $faker->word();
+            $skills->description = $faker->paragraphs(2, true);
+            $skills->image = $faker->imageUrl(250, 250);
             $skills->save();
         }
     }

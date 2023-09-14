@@ -16,6 +16,14 @@ class InstructionSeeder extends Seeder
     {
         for ($i = 1; $i <= 3; $i++) {
             $instruction = new Instruction;
+            $instruction->title = $faker->word();
+            $instruction->description = $faker->paragraphs(5, true);
+            $instruction->image = $faker->imageUrl(250, 250);
+            $instruction->qualification_study = $faker->word();
+            $instruction->course_study = $faker->word();
+            $instruction->valuation = $faker->word();
+            $instruction->start_date = $faker->dateTime();
+            $instruction->end_date = $faker->dateTime();
             $instruction->save();
         }
     }
