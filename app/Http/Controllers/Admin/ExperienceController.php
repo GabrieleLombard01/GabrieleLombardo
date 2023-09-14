@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Experience;
 use Illuminate\Http\Request;
 
 class ExperienceController extends Controller
@@ -12,7 +13,8 @@ class ExperienceController extends Controller
      */
     public function index()
     {
-        return view('admin.experiences.index');
+        $experiences = Experience::orderBy('updated_at', 'DESC')->get();
+        return view('admin.experiences.index', compact('experiences'));
     }
 
     /**

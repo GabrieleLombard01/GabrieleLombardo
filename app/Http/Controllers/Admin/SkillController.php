@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Skills;
 use Illuminate\Http\Request;
 
 class SkillController extends Controller
@@ -12,7 +13,8 @@ class SkillController extends Controller
      */
     public function index()
     {
-        return view('admin.skills.index');
+        $skills = Skills::orderBy('updated_at', 'DESC')->get();
+        return view('admin.skills.index', compact('skills'));
     }
 
     /**

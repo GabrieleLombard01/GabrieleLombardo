@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Instruction;
 use Illuminate\Http\Request;
 
 class InstructionController extends Controller
@@ -12,7 +13,8 @@ class InstructionController extends Controller
      */
     public function index()
     {
-        return view('admin.instructions.index');
+        $instructions = Instruction::orderBy('updated_at', 'DESC')->get();
+        return view('admin.instructions.index', compact('instructions'));
     }
 
     /**
