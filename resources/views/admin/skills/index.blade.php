@@ -11,13 +11,8 @@
                     <div class="card-header">CV</div>
 
                     <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
-
-                        {{ __('You are logged in!') }}
+                        SKILLS
+                        <button><a href="{{ url('admin/cv') }}">Torna in dietro</a></button>
                     </div>
                 </div>
             </div>

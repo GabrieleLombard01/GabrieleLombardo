@@ -2,18 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Curriculum;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CurriculumController extends Controller
+class InstructionController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin.cv.index');
+        return view('admin.instructions.index');
     }
 
     /**

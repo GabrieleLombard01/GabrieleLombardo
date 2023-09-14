@@ -16,10 +16,12 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/cv-show-case') }}">{{ __('CV') }}</a>
+                    <a class="nav-link @if (request()->routeIs('/cv-show-case')) active @endif"
+                        href="{{ url('/cv-show-case') }}">{{ __('CV') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/project-show-case') }}">{{ __('Progetti') }}</a>
+                    <a class="nav-link @if (request()->routeIs('/project-show-case')) active @endif"
+                        href="{{ url('/project-show-case') }}">{{ __('Progetti') }}</a>
                 </li>
             </ul>
 
@@ -43,8 +45,8 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('projects') }}">{{ __('Progetti') }}</a>
-                            <a class="dropdown-item" href="{{ url('cv') }}">{{ __('Curriculum') }}</a>
+                            <a class="dropdown-item" href="{{ url('/admin/projects') }}">{{ __('Progetti') }}</a>
+                            <a class="dropdown-item" href="{{ url('admin/cv') }}">{{ __('Curriculum') }}</a>
                             <a class="dropdown-item" href="{{ url('profile') }}">{{ __('Profile') }}</a>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
