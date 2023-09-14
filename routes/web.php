@@ -3,6 +3,8 @@
 use App\Http\Controllers\Admin\CurriculumController;
 use App\Http\Controllers\Guest\HomeController as GuestHomeController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Guest\CurriculumShowCaseController;
+use App\Http\Controllers\Guest\ProjectShowCaseController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +21,12 @@ use Illuminate\Support\Facades\Route;
 
 // Rotta HOME Guest
 Route::get('/', [GuestHomeController::class, 'index'])->name('guest.home');
+
+// Rotta cv showcase Guest
+Route::get('/cv-show-case', [CurriculumShowCaseController::class, 'index'])->name('guest.CvShowCase');
+
+// Rotta project showcase Guest
+Route::get('/project-show-case', [ProjectShowCaseController::class, 'index'])->name('guest.ProjectShowCase');
 
 // Rotta Progetti Admin
 Route::get('/projects', [ProjectController::class, 'index'])->middleware(['auth', 'verified'])->name('admin.projects');
