@@ -36,9 +36,9 @@ class InstructionController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Instruction $instruction)
     {
-        //
+        return view('admin.instructions.show', compact('instruction'));
     }
 
     /**
