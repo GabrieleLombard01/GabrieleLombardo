@@ -36,9 +36,9 @@ class ExperienceController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Experience $experience)
     {
-        //
+        return view('admin.experiences.show', compact('experience'));
     }
 
     /**
