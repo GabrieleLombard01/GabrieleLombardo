@@ -6,7 +6,7 @@
     <div class="container">
         <div class="mt-4 mb-5 d-flex justify-content-center align-items-center">
             <a class="btn btn-outline-secondary text-decoration-none fw-bold" href="{{ url('admin/experiences') }}"><i
-                    class="fa-solid fa-circle-chevron-left me-2"></i>Torna in dietro</a>
+                    class="fa-solid fa-circle-chevron-left me-2"></i>Torna indietro</a>
         </div>
 
 

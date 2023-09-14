@@ -9,7 +9,7 @@
                 Istruzione:
             </h2>
             <a class="btn btn-outline-secondary text-decoration-none fw-bold" href="{{ url('admin/cv') }}"><i
-                    class="fa-solid fa-circle-chevron-left me-2"></i>Torna in dietro</a>
+                    class="fa-solid fa-circle-chevron-left me-2"></i>Torna indietro</a>
         </div>
         <div class="row justify-content-center">
             <div class="col">
