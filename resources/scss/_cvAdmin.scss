@@ -1,0 +1,23 @@
+/*CSS reset*/
+
+
+/*Custom properties*/
+
+/*Pseudo-classes*/
+
+/*Generics*/
+
+/*Utilties*/
+.cv_container .card{
+    max-width: 195px;
+    cursor: pointer;
+}
+.cv_container .card a img{
+    width: 150px;
+    margin: auto;
+    filter: grayscale(1);
+}
+
+.cv_container .card:hover img{
+    filter: grayscale(0);
+}
