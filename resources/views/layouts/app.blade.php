@@ -27,7 +27,7 @@
 
         @include('includes.layout.header')
 
-        <main class="container mt-3">
+        <main>
             @yield('content')
         </main>
     </div>
