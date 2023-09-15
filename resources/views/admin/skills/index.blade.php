@@ -5,11 +5,11 @@
 @section('content')
     <div class="container">
         <div class="d-flex justify-content-between align-items-center">
-            <h2 class="fw-bold text-secondary my-4">
+            <h2 class="fw-bold my-4">
                 Competenze:
             </h2>
-            <a class="btn btn-outline-secondary text-decoration-none fw-bold" href="{{ url('admin/cv') }}"><i
-                    class="fa-solid fa-circle-chevron-left me-2"></i>Torna in dietro</a>
+            <a class="btn btn-outline-primary text-decoration-none fw-bold" href="{{ url('admin/cv') }}"><i
+                    class="fa-solid fa-circle-chevron-left me-2"></i>Torna indietro</a>
         </div>
         <div class="row justify-content-center">
             <div class="col">

@@ -4,11 +4,11 @@
 
 @section('content')
     <div class="container">
-        <h1 class="fw-bold text-secondary my-4">
+        <h1 class="fw-bold my-4">
             Curriculum
             </h2>
             <hr>
-            <h5 class="fs-4 text-secondary my-4">
+            <h5 class="fs-4 my-4">
                 Quale sezione vorresti modificare?
             </h5>
             <div class="cv_container flex-wrap justify-content-center d-flex ">

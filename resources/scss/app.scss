@@ -1,9 +1,16 @@
 @import '~bootstrap/scss/bootstrap';
-
-@import 'cvShowCase';
-@import 'cvAdmin';
-@import '_project_show';
+@import 'btns';
+@import 'header';
+@import 'cv_show_case';
+@import 'cv_admin';
+@import '_show';
 
 div{
     border: none;
 }
+body{
+    color: #023047;
+    background-color: #b2d7e8;
+}
+
+

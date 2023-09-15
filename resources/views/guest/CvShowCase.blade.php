@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title', 'CV')
 @section('content')
     <div class="cv-show-case">
 

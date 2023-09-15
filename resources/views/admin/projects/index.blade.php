@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="container">
-        <h2 class="fw-bold text-secondary my-4">
+        <h2 class="fw-bold my-4">
             Progetti:
         </h2>
         <div class="row justify-content-center">
