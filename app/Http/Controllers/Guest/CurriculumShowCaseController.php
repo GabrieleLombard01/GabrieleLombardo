@@ -14,7 +14,7 @@ class CurriculumShowCaseController extends Controller
     {
         $experiences = Experience::orderBy('created_at')->get();
         $instructions = Instruction::orderBy('created_at')->get();
-        $skills = Skills::orderBy('created_at')->get();
+        $skills = Skills::orderBy('created_at')->limit(6)->get();
 
         // Passa i dati alla vista utilizzando un array associativo
         return view('guest.CvShowCase', [

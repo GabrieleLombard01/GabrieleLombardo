@@ -1,5 +1,7 @@
 /*CSS reset*/
-
+.box_shadow{
+    box-shadow: 0px 0px 20px 5px black;
+}
 
 /*Custom properties*/
 
@@ -21,3 +23,6 @@
 .cv_container .card:hover img{
     filter: grayscale(0);
 }
+
+
+

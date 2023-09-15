@@ -2,7 +2,7 @@
 @import 'btns';
 @import 'header';
 @import 'cv_show_case';
-@import 'cv_admin';
+@import 'cards';
 @import '_show';
 @import '_footer';
 
@@ -15,4 +15,6 @@ body{
 }
 
 
-
+ul li{
+    list-style-type: none;
+}

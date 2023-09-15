@@ -9,7 +9,17 @@
     position: relative;
     padding-bottom: 200px;
 }
-
+.mb-max{
+    margin-bottom: 160px;
+}
+.text-orange{
+    color: #fb8500;
+    font-weight: 800;
+}
+.text-blue{
+    color: #1b829c;
+    font-weight: 600;
+}
 /*Custom properties*/
 
 /*Pseudo-classes*/
@@ -64,10 +74,33 @@
 }
 .skill-container{
     height: 100px;
-    width: 100%;
+    width: fit-content;
+
+}
+.skill-container img{
+    border-radius: 50%;
 }
 .skill-text{
     height: 30px;
+    width: fit-content;
+}
+
+/*experiences*/
+.experience_jumbo{
+    background-image: url(../../public/images/jumbo_cv.png);
+    background-size: cover;
     width: 100%;
-    text-align: center;
+    min-height: 400px;
+    margin-bottom: 80px;
+    box-shadow: 0px 25px 18px 23px #232221;
+    border-bottom: solid #232221 0.5px;
+}
+
+/*instruction*/
+.instruction_jumbo{
+    width: 100%;
+    background-color: #fb8500;
+    border-bottom: solid #fb8500 10px;
+    height: 60px;
+    box-shadow: 0px 40px 25px 13px #fb8500;
 }
