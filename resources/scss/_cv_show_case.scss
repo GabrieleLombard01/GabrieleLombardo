@@ -3,8 +3,11 @@
     width: 100%;
     min-height: 100vh;
     background-image: url(../../public/images/backgrounds/bg_3.png);
+    background-color: #6ec2e9;
     background-size: cover;
+    background-blend-mode: screen;
     position: relative;
+    padding-bottom: 200px;
 }
 
 /*Custom properties*/

@@ -66,4 +66,6 @@
         </div>
 
     </div>
+    @include('includes.layout.footer')
+
 @endsection
