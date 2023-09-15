@@ -20,7 +20,9 @@
                             <th scope="col">Titolo</th>
                             <th scope="col">Creato il</th>
                             <th scope="col">Ultima modifica</th>
-                            <th></th>
+                            <th><a class=" btn btn-sm btn-success float-end fw-bold "
+                                    href="{{ route('admin.skills.create') }}"><i class="fa-solid fa-plus fa-xl"></i></a>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>

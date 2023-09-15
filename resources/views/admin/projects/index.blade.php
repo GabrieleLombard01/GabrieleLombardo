@@ -4,9 +4,12 @@
 
 @section('content')
     <div class="container">
-        <h2 class="fw-bold my-4">
-            Progetti:
-        </h2>
+        <header class="d-flex justify-content-between align-items-center">
+            <h2 class="fw-bold my-4">Progetti:</h2>
+            <a class="btn btn-outline-primary fw-bold" href="{{ route('admin.projects.create') }}">Crea un nuovo progetto</a>
+        </header>
+
+
         <div class="row justify-content-center">
             <div class="col">
                 <table class="table">

@@ -22,7 +22,10 @@
                             <th scope="col">Luogo</th>
                             <th scope="col">Creato il</th>
                             <th scope="col">Ultima modifica</th>
-                            <th></th>
+                            <th><a class=" btn btn-sm btn-success float-end fw-bold "
+                                    href="{{ route('admin.experiences.create') }}"><i
+                                        class="fa-solid fa-plus fa-xl"></i></a>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -42,7 +45,8 @@
                                         <a class="btn btn-sm btn-secondary"
                                             href="{{ route('admin.experiences.edit', $experience) }}"><i
                                                 class="fa-solid fa-pen-to-square fw-bold text-white"></i></a>
-                                        <form action="{{ route('admin.experiences.destroy', $experience) }}" method="POST">
+                                        <form action="{{ route('admin.experiences.destroy', $experience) }}"
+                                            method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-primary">
