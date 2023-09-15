@@ -24,5 +24,20 @@
                 </h5>
             </div>
         </div>
+        <div class="mt-4 mb-5 d-flex align-items-center gap-3 justify-content-center ">
+
+            <a class="btn btn-secondary" href="{{ route('admin.projects.edit', $project) }}"><i
+                    class="fa-solid fa-pen-to-square fw-bold text-white"></i></a>
+
+            <form action="{{ route('admin.projects.destroy', $project) }}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-primary">
+                    <a class="text-decoration-none" href="#"><i
+                            class="fa-solid fa-trash-can fw-bold text-white"></i></a>
+                </button>
+            </form>
+
+        </div>
     </div>
 @endsection
