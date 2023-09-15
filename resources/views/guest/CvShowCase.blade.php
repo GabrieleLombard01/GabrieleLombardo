@@ -60,9 +60,10 @@
             <hr>
             @forelse ($experiences as $experience)
                 <div class="mt-5 row justify-content-center ">
-                    <div class="col-10 d-flex justify-content-between ">
-                        <div class="col-5 col-md-3">
-                            <img class="img-fluid rounded-3 box_shadow" src="{{ $experience->image }}" alt="">
+                    <div class="col-10 d-flex flex-column flex-sm-row align-items-center justify-content-between ">
+                        <div class="col-5 mb-3 mb-sm-none col-md-3">
+                            <img class="img-fluid ms-md-4 rounded-3 box_shadow" src="{{ $experience->image }}"
+                                alt="">
                         </div>
                         <div class="col-6 col-md-8">
                             <ul>
@@ -102,7 +103,7 @@
 
         </div>
 
-        <img width="100%" height="70px" src="{{ asset('images/orange_wave-removebg.png') }}" alt="">
+        <img width="100%" height="90px" src="{{ asset('images/orange_wave-removebg.png') }}" alt="">
         <div class="instruction_jumbo mb-5"></div>
 
         <!--Istruzione-->
@@ -111,9 +112,10 @@
             <hr>
             @forelse ($instructions as $instruction)
                 <div class="mt-5 row justify-content-center ">
-                    <div class="col-10 d-flex justify-content-between ">
-                        <div class="col-5 col-md-3">
-                            <img class="img-fluid rounded-3 box_shadow" src="{{ $instruction->image }}" alt="">
+                    <div class="col-10 d-flex flex-column flex-sm-row align-items-center justify-content-between ">
+                        <div class="col-5 mb-3 mb-sm-none col-md-3">
+                            <img class="img-fluid ms-md-4 rounded-3 box_shadow" src="{{ $instruction->image }}"
+                                alt="">
                         </div>
                         <div class="col-6 col-md-8">
                             <ul>

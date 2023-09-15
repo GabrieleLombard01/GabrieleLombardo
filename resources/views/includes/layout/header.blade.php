@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-md navbar-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-                <div class="logo">
+                <div class="logo  me-md-4">
                     logo
                 </div>
                 {{-- config('app.name', 'Laravel') --}}
@@ -17,7 +17,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link @if (request()->routeIs('/cv-show-case')) active @endif"
+                        <a class="nav-link me-md-4 @if (request()->routeIs('/cv-show-case')) active @endif"
                             href="{{ url('/cv-show-case') }}">{{ __('CV') }}</a>
                     </li>
                     <li class="nav-item">

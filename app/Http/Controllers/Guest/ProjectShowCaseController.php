@@ -11,6 +11,6 @@ class ProjectShowCaseController extends Controller
     public function index()
     {
         $projects = Project::orderBy('created_at')->get();
-        return view('guest.ProjectShowCase', $projects);
+        return view('guest.ProjectShowCase', compact('projects'));
     }
 }

@@ -13,8 +13,9 @@
     margin-bottom: 160px;
 }
 .text-orange{
-    color: #fb8500;
+    color: #dd3b00;
     font-weight: 800;
+    text-shadow: 0px 0px 20px #00c3ff;
 }
 .text-blue{
     color: #1b829c;
@@ -35,7 +36,7 @@
     border-top-left-radius: 20px;
     background-color: #023047;
     font-weight: 700;
-    color: #fb8500;
+    color: #ffb703;
     position: absolute;
     right: 0;
     font-size: 26px;
@@ -101,6 +102,6 @@
     width: 100%;
     background-color: #fb8500;
     border-bottom: solid #fb8500 10px;
-    height: 60px;
+    height: 150px;
     box-shadow: 0px 40px 25px 13px #fb8500;
 }
