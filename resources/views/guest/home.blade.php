@@ -37,7 +37,7 @@
         <div class="container">
             <h1 class="text-center pt-1">WELCOME</h1>
             <div class="row justify-content-center ">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center ">
+                <div class="col-12 col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center flex-wrap ">
                     <img class="mt-4 img-fluid" src="{{ asset('images/MyPhoto.png') }}" alt="myphoto">
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-5">
@@ -51,14 +51,32 @@
 
         <!--SKILL-->
         <div class="skill_home_container">
-            <div class="row p-3">
-                @forelse ($skills as $skill)
-                    <div class="pt-4 pb-4 col-12 col-sm-6 col-md-4 d-flex justify-content-center">
-                        <img width="50px" src="{{ $skill->image }}" alt="{{ $skill->title }}">
-                    </div>
-                @empty
-                    <h5>no skills</h5>
-                @endforelse
+            <div class="container-sm">
+                <div class="row p-3">
+
+                    @forelse ($skills as $skill)
+                        <div class="pt-4 pb-4 col-12 col-sm-6 col-md-4 d-flex justify-content-center">
+                            <img width="50px" src="{{ $skill->image }}" alt="{{ $skill->title }}">
+                        </div>
+                    @empty
+                        <h5>no skills</h5>
+                    @endforelse
+                </div>
+            </div>
+        </div>
+
+        <!--ANCORE-->
+        <div class="jfooter_home_container">
+            <div class="container pt-2">
+                <h1>Scopri...</h1>
+                <ul class="pt-2">
+                    <li><a href="{{ url('/cv-show-case') }}">...il mio curriculum</a></li>
+                    <li><a href="{{ url('/project-show-case') }}">...i miei progetti</a></li>
+                </ul>
+                <h2>Oppure</h2>
+                <ul class="pt-2">
+                    <li><a href="{{ url('/') }}">Torna su</a></li>
+                </ul>
             </div>
         </div>
 

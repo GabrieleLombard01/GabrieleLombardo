@@ -33,3 +33,34 @@
     width: 100%;
     min-height: 100px;
 }
+
+/*ancore*/
+.jfooter_home_container{
+    background-color: #219ebc;
+    width: 100%;
+    min-height: 100px;
+    padding-bottom: 50px;
+}
+.jfooter_home_container h1{
+    color: #fb8500;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 50px;
+    text-shadow: 7px 4px 0px #023047;
+}
+.jfooter_home_container h2{
+    color: #fb8500;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 40px;
+    text-shadow: 7px 4px 0px #023047;
+}
+.jfooter_home_container ul li a{
+    font-size: 22px;
+    font-weight: 600;
+    color: #023047;
+}
+.jfooter_home_container ul li a:hover{
+    text-decoration: underline;
+    font-weight: 800;
+}
