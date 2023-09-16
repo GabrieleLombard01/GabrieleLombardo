@@ -17,3 +17,11 @@ a{
     background-color: #023047;
     box-shadow:0px 0px 5px 1px #03496b;
 }
+/*PSEUDO CLASSES*/
+nav .logo .fa-house:hover{
+    color: #fb8500;
+}
+#navbarSupportedContent ul li a:hover{
+    text-decoration: underline;
+    color: #fb8500;
+}

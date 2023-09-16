@@ -3,7 +3,7 @@
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                 <div class="logo  me-md-4">
-                    logo
+                    <i class="fa-solid fa-house fa-xl"></i>
                 </div>
                 {{-- config('app.name', 'Laravel') --}}
             </a>
