@@ -2,7 +2,9 @@
 @section('title', 'Progetti')
 
 @section('content')
-    <div class="jumbo_projects"></div>
+    <div class="jumbo_projects">
+        <div class="title-pr">PROGETTI</div>
+    </div>
 
     <div class="container p-0">
 

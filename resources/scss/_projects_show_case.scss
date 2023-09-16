@@ -5,7 +5,19 @@
     background-size: cover;
     box-shadow: 0px 0px 60px 20px black;
 }
-
+.title-pr{
+    width: fit-content;
+    padding: 10px;
+    margin-top: 50px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: #023047;
+    font-weight: 700;
+    color: #fb8500;
+    position: absolute;
+    right: 0;
+    font-size: 26px;
+}
 
 .mb-max-p{
     margin-bottom: 300px;

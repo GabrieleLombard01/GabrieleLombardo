@@ -38,7 +38,7 @@
             <h1 class="text-center pt-1">WELCOME</h1>
             <div class="row justify-content-center ">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center flex-wrap ">
-                    <img class="mt-4 img-fluid" src="{{ asset('images/MyPhoto.png') }}" alt="myphoto">
+                    <img id="myphoto" class="mt-4 img-fluid" src="{{ asset('images/MyPhoto.png') }}" alt="myphoto">
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-5">
                     <h3 class="pt-4">Sono un ragazzo di Torino, classe 2001 con la passione per lo sviluppo web!</h3>
@@ -66,8 +66,8 @@
         </div>
 
         <!--ANCORE-->
-        <div class="jfooter_home_container">
-            <div class="container pt-2">
+        <div class="mt-3 jfooter_home_container">
+            <div class="container text-md-center  pt-5">
                 <h1>Scopri...</h1>
                 <ul class="pt-2">
                     <li><a href="{{ url('/cv-show-case') }}">...il mio curriculum</a></li>
