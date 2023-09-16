@@ -3,12 +3,13 @@
 @import 'header';
 @import 'cv_show_case';
 @import 'projects_show_case';
+@import 'home';
 @import 'cards';
 @import '_show';
 @import '_footer';
 
 div{
-    border: none;
+    border: solid black 1px;
 }
 body{
     color: #023047;

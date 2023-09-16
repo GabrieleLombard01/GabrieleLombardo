@@ -1,0 +1,35 @@
+/*BIO*/
+.bio_home_container{
+    margin-bottom: 300px;
+    box-shadow: 1px 50px 30px 14px #219ebc;
+    background-color: #219ebc;
+    width: 100%;
+    min-height: 100vh;
+}
+.bio_home_container h1{
+    color: #fb8500;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 80px;
+    text-shadow: 7px 4px 0px #023047;
+}
+.bio_home_container h3{
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+.bio_home_container .row img{
+    min-width: 150px;
+    max-width: 450px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 5px black;
+
+}
+
+/*skill*/
+.skill_home_container{
+    margin-top: 50px;
+    background-color: #fb8500;
+    width: 100%;
+    min-height: 100px;
+}

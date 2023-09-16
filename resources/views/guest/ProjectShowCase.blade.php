@@ -30,7 +30,7 @@
                 <hr>
             @endforelse
         </div>
-        @include('includes.layout.footer')
     </div>
+    @include('includes.layout.footer')
 
 @endsection
