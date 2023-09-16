@@ -47,7 +47,7 @@
                                             href="{{ route('admin.instructions.edit', $instruction) }}"><i
                                                 class="fa-solid fa-pen-to-square fw-bold text-white"></i></a>
                                         <form action="{{ route('admin.instructions.destroy', $instruction) }}"
-                                            method="POST">
+                                            method="POST" class="">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-dark">

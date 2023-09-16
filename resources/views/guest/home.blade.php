@@ -35,13 +35,13 @@
     <!--BIO-->
     <div class="bio_home_container">
         <div class="container">
-            <h1 class="text-center pt-1">WELCOME</h1>
+            <h1 class="text-center ">WELCOME</h1>
             <div class="row justify-content-center ">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 d-flex justify-content-center flex-wrap ">
-                    <img id="myphoto" class="mt-4 img-fluid" src="{{ asset('images/MyPhoto.png') }}" alt="myphoto">
+                    <img id="myphoto" class="mt-2 img-fluid" src="{{ asset('images/MyPhoto.png') }}" alt="myphoto">
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 p-5">
-                    <h3 class="pt-4">Sono un ragazzo di Torino, classe 2001 con la passione per lo sviluppo web!</h3>
+                    <h3 class="pt-2">Sono un ragazzo di Torino, classe 2001 con la passione per lo sviluppo web!</h3>
                     <h3 class="pt-4">Dopo il diploma, ho frequentato il corso per Jr Full Stack di Boolean academy.</h3>
                     <h3 class="pt-4">Ho tanta voglia di imparare e di crescere in questo settore,<br> al momento sono alla
                         ricerca di una prima occupazione</h3>

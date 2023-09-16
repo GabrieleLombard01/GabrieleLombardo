@@ -29,7 +29,7 @@
             <a class="btn btn-secondary" href="{{ route('admin.projects.edit', $project) }}"><i
                     class="fa-solid text-white fa-pen-to-square fw-bold text-white pe-2"></i>Modifica</a>
 
-            <form action="{{ route('admin.projects.destroy', $project) }}" method="POST">
+            <form action="{{ route('admin.projects.destroy', $project) }}" method="POST" class="delete-form">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-primary">
@@ -40,4 +40,8 @@
 
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    @vite('resources/js/delete-confirmation.js')
 @endsection

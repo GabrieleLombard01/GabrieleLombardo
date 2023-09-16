@@ -41,7 +41,7 @@
             <a class="btn btn-secondary" href="{{ route('admin.experiences.edit', $experience) }}"><i
                     class="fa-solid text-white fa-pen-to-square fw-bold text-white pe-2"></i></a>
 
-            <form action="{{ route('admin.experiences.destroy', $experience) }}" method="POST">
+            <form action="{{ route('admin.experiences.destroy', $experience) }}" method="POST" class="">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-primary">

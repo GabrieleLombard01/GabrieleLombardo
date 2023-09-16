@@ -32,7 +32,7 @@
 
             <a class="btn text-white btn-secondary" href="{{ route('admin.skills.edit', $skill) }}"><i
                     class="fa-solid fa-pen-to-square fw-bold text-white pe-2"></i></a>
-            <form action="{{ route('admin.skills.destroy', $skill) }}" method="POST">
+            <form action="{{ route('admin.skills.destroy', $skill) }}" method="POST" class="">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-primary">
