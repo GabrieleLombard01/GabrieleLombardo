@@ -6,13 +6,13 @@
         <div class="title-pr">PROGETTI</div>
     </div>
 
-    <div class="container p-0">
+    <div class="container p-0 mb-max-p">
 
         <h1 class="fw-max text-center pt-5 pb-3">Alcuni dei miei lavori...</h1>
         <div class="orange_hr"></div>
 
 
-        <div class="row mb-max-p">
+        <div class="row mb-4">
             @forelse ($projects as $project)
                 <div class="col-12 col-sm-6 col-md-4 mt-4">
                     <div class="card p-4 rounded-3 ">
@@ -32,6 +32,9 @@
                 <hr>
             @endforelse
         </div>
+        @if ($projects->hasPages())
+            {{ $projects->links() }}
+        @endif
     </div>
     @include('includes.layout.footer')
 

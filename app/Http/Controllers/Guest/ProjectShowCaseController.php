@@ -10,7 +10,7 @@ class ProjectShowCaseController extends Controller
 {
     public function index()
     {
-        $projects = Project::orderBy('created_at')->get();
+        $projects = Project::orderBy('created_at')->simplePaginate(5);
         return view('guest.ProjectShowCase', compact('projects'));
     }
 }
