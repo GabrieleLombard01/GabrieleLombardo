@@ -32,9 +32,7 @@
                 <hr>
             @endforelse
         </div>
-        @if ($projects->hasPages())
-            {{ $projects->links() }}
-        @endif
+
     </div>
     @include('includes.layout.footer')
 

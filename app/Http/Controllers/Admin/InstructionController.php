@@ -13,7 +13,7 @@ class InstructionController extends Controller
      */
     public function index()
     {
-        $instructions = Instruction::orderBy('updated_at', 'DESC')->simplePaginate(10);
+        $instructions = Instruction::orderBy('updated_at', 'DESC')->paginate(10);
         return view('admin.instructions.index', compact('instructions'));
     }
 

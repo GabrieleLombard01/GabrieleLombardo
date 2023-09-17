@@ -13,7 +13,7 @@ class ExperienceController extends Controller
      */
     public function index()
     {
-        $experiences = Experience::orderBy('updated_at', 'DESC')->simplePaginate(10);
+        $experiences = Experience::orderBy('updated_at', 'DESC')->paginate(10);
         return view('admin.experiences.index', compact('experiences'));
     }
 
