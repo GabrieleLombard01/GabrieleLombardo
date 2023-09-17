@@ -60,8 +60,10 @@ class ExperienceController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Experience $experience)
     {
-        //
+        $experience->delete();
+
+        return to_route('admin.experiences.index')->with('alert-type', 'success')->with('alert-message', "Esperienza eliminata con successo!");
     }
 }

@@ -33,8 +33,8 @@
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-primary">
-                    <a class="text-white text-decoration-none" href="#"><i
-                            class="pe-2 fa-solid fa-trash-can fw-bold text-white"></i>Elimina</a>
+                    <span class="text-white text-decoration-none"><i
+                            class="pe-2 fa-solid fa-trash-can fw-bold text-white"></i>Elimina</span>
                 </button>
             </form>
 

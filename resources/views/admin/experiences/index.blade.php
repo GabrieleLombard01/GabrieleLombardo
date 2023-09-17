@@ -46,12 +46,12 @@
                                             href="{{ route('admin.experiences.edit', $experience) }}"><i
                                                 class="fa-solid fa-pen-to-square fw-bold text-white"></i></a>
                                         <form action="{{ route('admin.experiences.destroy', $experience) }}" method="POST"
-                                            class="">
+                                            class="delete-form">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-primary">
-                                                <a class="text-decoration-none" href="#"><i
-                                                        class="fa-solid fa-trash-can fw-bold text-white"></i></a>
+                                                <span class="text-decoration-none"><i
+                                                        class="fa-solid fa-trash-can fw-bold text-white"></i></span>
                                             </button>
                                         </form>
                                     </div>
@@ -69,4 +69,7 @@
             </div>
         </div>
     </div>
+@endsection
+@section('scripts')
+    @vite('resources/js/delete-confirmation.js')
 @endsection

@@ -43,12 +43,12 @@
 
             <a class="btn btn-secondary" href="{{ route('admin.instructions.edit', $instruction) }}"><i
                     class=" text-white fa-solid fa-pen-to-square fw-bold text-white pe-2"></i></a>
-            <form action="{{ route('admin.instructions.destroy', $instruction) }}" method="POST" class="">
+            <form action="{{ route('admin.instructions.destroy', $instruction) }}" method="POST" class="delete-form">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-primary">
-                    <a class="text-white text-decoration-none" href="#"><i
-                            class="pe-2 fa-solid fa-trash-can fw-bold text-white"></i>Elimina</a>
+                    <span class="text-white text-decoration-none"><i
+                            class="pe-2 fa-solid fa-trash-can fw-bold text-white"></i>Elimina</span>
                 </button>
             </form>
 
@@ -56,4 +56,7 @@
 
 
     </div>
+@endsection
+@section('scripts')
+    @vite('resources/js/delete-confirmation.js')
 @endsection

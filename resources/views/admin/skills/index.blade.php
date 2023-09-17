@@ -41,12 +41,12 @@
                                             href="{{ route('admin.skills.edit', $skill) }}"><i
                                                 class="fa-solid fa-pen-to-square fw-bold text-white"></i></a>
                                         <form action="{{ route('admin.skills.destroy', $skill) }}" method="POST"
-                                            class="">
+                                            class="delete-form">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-dark">
-                                                <a class="text-decoration-none" href="#"><i
-                                                        class="fa-solid fa-trash-can fw-bold text-white"></i></a>
+                                                <span class="text-decoration-none"><i
+                                                        class="fa-solid fa-trash-can fw-bold text-white"></i></span>
                                             </button>
                                         </form>
                                     </div>
@@ -64,4 +64,7 @@
             </div>
         </div>
     </div>
+@endsection
+@section('scripts')
+    @vite('resources/js/delete-confirmation.js')
 @endsection

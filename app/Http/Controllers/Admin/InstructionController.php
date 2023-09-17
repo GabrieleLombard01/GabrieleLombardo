@@ -60,8 +60,10 @@ class InstructionController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Instruction $instruction)
     {
-        //
+        $instruction->delete();
+
+        return to_route('admin.instructions.index')->with('alert-type', 'success')->with('alert-message', "Istruzione eliminata con successo!");
     }
 }
