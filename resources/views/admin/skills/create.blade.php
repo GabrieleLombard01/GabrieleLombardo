@@ -10,5 +10,10 @@
         </div>
     </div>
 
+    @include('includes.skills.form')
 
+@endsection
+
+@section('scripts')
+    @vite('resources/js/image-previewer.js')
 @endsection
