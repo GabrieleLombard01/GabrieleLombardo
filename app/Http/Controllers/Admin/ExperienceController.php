@@ -22,7 +22,8 @@ class ExperienceController extends Controller
      */
     public function create()
     {
-        //
+        $experience = new Experience();
+        return view('admin.experiences.create', compact('experience'));
     }
 
     /**

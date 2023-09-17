@@ -22,7 +22,8 @@ class SkillController extends Controller
      */
     public function create()
     {
-        //
+        $Skill = new Skills();
+        return view('admin.Skills.create', compact('Skill'));
     }
 
     /**

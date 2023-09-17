@@ -22,7 +22,8 @@ class InstructionController extends Controller
      */
     public function create()
     {
-        //
+        $instruction = new Instruction();
+        return view('admin.instructions.create', compact('instruction'));
     }
 
     /**
