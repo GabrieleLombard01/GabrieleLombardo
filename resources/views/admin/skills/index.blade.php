@@ -4,6 +4,8 @@
 
 @section('content')
     <div class="container">
+        @include('includes.layout.alerts')
+
         <div class="d-flex justify-content-between align-items-center">
             <h2 class="fw-bold my-4">
                 Competenze:
@@ -44,7 +46,7 @@
                                             class="delete-form">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-dark">
+                                            <button type="submit" class="btn btn-sm btn-primary">
                                                 <span class="text-decoration-none"><i
                                                         class="fa-solid fa-trash-can fw-bold text-white"></i></span>
                                             </button>

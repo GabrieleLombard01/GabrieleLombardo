@@ -4,6 +4,8 @@
 
 @section('content')
     <div class="container">
+        @include('includes.layout.alerts')
+
         <div class="d-flex justify-content-between align-items-center">
             <h2 class="fw-bold my-4">
                 Esperienze:
