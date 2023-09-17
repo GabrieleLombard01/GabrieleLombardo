@@ -14,7 +14,7 @@ class SkillsSeeder extends Seeder
      */
     public function run(Generator $faker): void
     {
-        for ($i = 1; $i <= 5; $i++) {
+        for ($i = 1; $i <= 20; $i++) {
             $skills = new Skills();
             $skills->title = $faker->word();
             $skills->description = $faker->paragraphs(2, true);

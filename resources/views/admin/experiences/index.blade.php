@@ -61,13 +61,16 @@
                             </tr>
                         @empty
                             <tr>
-                                <td class="text-center" colspan="6">
+                                <td class="text-center" colspan="7">
                                     <h3>Nessuna esperienza :(</h3>
                                 </td>
                             </tr>
                         @endforelse
                     </tbody>
                 </table>
+                @if ($experiences->hasPages())
+                    {{ $experiences->links() }}
+                @endif
             </div>
         </div>
     </div>

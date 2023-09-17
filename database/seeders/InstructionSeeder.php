@@ -14,7 +14,7 @@ class InstructionSeeder extends Seeder
      */
     public function run(Generator $faker): void
     {
-        for ($i = 1; $i <= 3; $i++) {
+        for ($i = 1; $i <= 20; $i++) {
             $instruction = new Instruction;
             $instruction->title = $faker->word();
             $instruction->description = $faker->paragraphs(5, true);

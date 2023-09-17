@@ -14,7 +14,7 @@ class ExperienceSeeder extends Seeder
      */
     public function run(Generator $faker): void
     {
-        for ($i = 1; $i <= 3; $i++) {
+        for ($i = 1; $i <= 20; $i++) {
             $experience = new Experience();
             $experience->title = $faker->word();
             $experience->description = $faker->paragraphs(5, true);

@@ -13,7 +13,7 @@ class SkillController extends Controller
      */
     public function index()
     {
-        $skills = Skills::orderBy('updated_at', 'DESC')->get();
+        $skills = Skills::orderBy('updated_at', 'DESC')->simplePaginate(10);
         return view('admin.skills.index', compact('skills'));
     }
 
