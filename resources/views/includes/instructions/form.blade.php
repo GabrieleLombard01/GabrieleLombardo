@@ -1,4 +1,4 @@
-<form method="POST" action="{{ route('admin.projects.store') }}">
+<form method="POST" action="{{ route('admin.instructions.store') }}">
     @csrf
     <div class="card_show">
         <div class="container">
@@ -11,9 +11,23 @@
                 </div>
 
                 <div class="col-12 col-md-6">
-                    <label for="slug" class="mt-3 form-label">Slug</label>
-                    <input type="text" class="form-control" id="slug" name="slug" value="{{ old('slug') }}"
-                        max-lenght="50" disabled>
+                    <label for="qualification_study" class="mt-3 form-label">Qualifica</label>
+                    <input type="text" class="form-control" id="qualification_study" name="qualification_study"
+                        value="{{ old('qualification_study') }}" placeholder="Inserisci una qualifica..."
+                        max-lenght="50" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="course_study" class="mt-3 form-label">Corso di studi</label>
+                    <input type="text" class="form-control" id="course_study" name="course_study"
+                        value="{{ old('course_study') }}" placeholder="Inserisci il corso di studi..." max-lenght="50"
+                        required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="valuation" class="mt-3 form-label">Valutazione</label>
+                    <input type="text" class="form-control" id="valuation" name="valuation"
+                        value="{{ old('location') }}" placeholder="Inserisci il voto..." max-lenght="50" required>
                 </div>
 
                 <div class="col-12">
@@ -21,6 +35,17 @@
                     <textarea class="form-control" id="content" name="content" rows="5" required>{{ old('content') }}</textarea>
                 </div>
 
+                <div class="col-12 col-md-6">
+                    <label for="start_date" class="mt-3 form-label">Inizio</label>
+                    <input type="date" class="form-control" id="start_date" name="start_date"
+                        value="{{ old('start_date') }}" max-lenght="50" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <label for="end_date" class="mt-3 form-label">Fine</label>
+                    <input type="date" class="form-control" id="end_date" name="end_date"
+                        value="{{ old('end_date') }}" max-lenght="50" required>
+                </div>
 
                 <div class="col-12 col-md-10">
                     <label for="image" class="mt-3 form-label">Immagine</label>

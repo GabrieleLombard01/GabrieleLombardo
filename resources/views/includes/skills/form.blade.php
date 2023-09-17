@@ -1,26 +1,19 @@
-<form method="POST" action="{{ route('admin.projects.store') }}">
+<form method="POST" action="{{ route('admin.skills.store') }}">
     @csrf
     <div class="card_show">
         <div class="container">
             <div class="row">
 
-                <div class="col-12 col-md-6">
+                <div class="col-12">
                     <label for="title" class="mt-3 form-label">Titolo</label>
                     <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}"
                         placeholder="Inserisci il titolo..." max-lenght="50" required>
                 </div>
 
-                <div class="col-12 col-md-6">
-                    <label for="slug" class="mt-3 form-label">Slug</label>
-                    <input type="text" class="form-control" id="slug" name="slug" value="{{ old('slug') }}"
-                        max-lenght="50" disabled>
-                </div>
-
                 <div class="col-12">
-                    <label for="content" class="mt-3 form-label">Descrizione</label>
-                    <textarea class="form-control" id="content" name="content" rows="5" required>{{ old('content') }}</textarea>
+                    <label for="description" class="mt-3 form-label">Descrizione</label>
+                    <textarea class="form-control" id="description" name="description" rows="5" required>{{ old('description') }}</textarea>
                 </div>
-
 
                 <div class="col-12 col-md-10">
                     <label for="image" class="mt-3 form-label">Immagine</label>

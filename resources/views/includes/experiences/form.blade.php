@@ -1,4 +1,4 @@
-<form method="POST" action="{{ route('admin.projects.store') }}">
+<form method="POST" action="{{ route('admin.experiences.store') }}">
     @csrf
     <div class="card_show">
         <div class="container">
