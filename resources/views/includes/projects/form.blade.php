@@ -12,8 +12,8 @@
 
                 <div class="col-12 col-md-6">
                     <label for="slug" class="mt-3 form-label">Slug</label>
-                    <input type="text" class="form-control" id="slug" name="slug" value="{{ old('slug') }}"
-                        max-lenght="50" disabled>
+                    <input type="text" class="form-control" id="slug"
+                        value="{{ Str::slug(old('title', $project->title), '-') }}" max-lenght="50" disabled>
                 </div>
 
                 <div class="col-12">

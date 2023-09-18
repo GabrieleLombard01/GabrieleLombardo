@@ -16,4 +16,5 @@
 
 @section('scripts')
     @vite('resources/js/image-previewer.js')
+    @vite('resources/js/slug-generator.js')
 @endsection
