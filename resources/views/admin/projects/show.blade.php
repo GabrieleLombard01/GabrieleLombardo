@@ -9,8 +9,11 @@
                     class="fa-solid fa-circle-chevron-left me-2"></i>Torna indietro</a>
         </div>
         <div class="mt-3  row card_show justify-content-center justify-content-md-start  ">
-            <div class="col-12 col-md-4"><img class="float-start me-3 img-fluid rounded-3" width="250px"
-                    src="{{ $project->image }}" alt="{{ $project->title }}">
+            <div class="col-12 col-md-4">
+                @if ($project->image)
+                    <img class="float-start me-3 img-fluid rounded-3" width="250px" src="{{ $project->image }}"
+                        alt="{{ $project->title }}">
+                @endif
                 <h1 class=" fw-bold text-secondary my-2">
                     {{ $project->title }}
                 </h1>

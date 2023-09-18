@@ -12,8 +12,11 @@
 
         <div class="mt-3  row card_show justify-content-center justify-content-md-start  ">
 
-            <div class="col-12 col-md-4"><img class="float-start me-3 img-fluid rounded-3" width="250px"
-                    src="{{ $experience->image }}" alt="{{ $experience->title }}">
+            <div class="col-12 col-md-4">
+                @if ($experience->image)
+                    <img class="float-start me-3 img-fluid rounded-3" width="250px" src="{{ $experience->image }}"
+                        alt="{{ $experience->title }}">
+                @endif
                 <h1 class=" fw-bold text-secondary my-2">
                     {{ $experience->title }}
                 </h1>
