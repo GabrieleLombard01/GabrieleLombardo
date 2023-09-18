@@ -61,9 +61,15 @@ class SkillController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Skills $skill)
     {
-        //
+        $data = $request->all();
+
+        $skill->update($data);
+
+        $skill->save();
+
+        return to_route('admin.skills.show', $skill)->with('alert-message', 'Progetto modificato con successo!')->with('alert-type', 'success');
     }
 
     /**

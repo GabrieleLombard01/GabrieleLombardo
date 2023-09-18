@@ -61,9 +61,15 @@ class InstructionController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Instruction $instruction)
     {
-        //
+        $data = $request->all();
+
+        $instruction->update($data);
+
+        $instruction->save();
+
+        return to_route('admin.instructions.show', $instruction)->with('alert-message', 'Progetto modificato con successo!')->with('alert-type', 'success');
     }
 
     /**

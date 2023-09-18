@@ -61,9 +61,15 @@ class ExperienceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Experience $experience)
     {
-        //
+        $data = $request->all();
+
+        $experience->update($data);
+
+        $experience->save();
+
+        return to_route('admin.experiences.show', $experience)->with('alert-message', 'Progetto modificato con successo!')->with('alert-type', 'success');
     }
 
     /**

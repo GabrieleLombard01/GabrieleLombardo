@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('qualification', 50);
             $table->string('contract', 80);
             $table->string('location', 80);
-            $table->dateTime('start_date');
-            $table->dateTime('end_date');
+            $table->date('start_date')->format('d/m/Y');
+            $table->date('end_date')->format('d/m/Y');
             $table->timestamps();
             $table->softDeletes();
         });

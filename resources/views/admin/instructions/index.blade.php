@@ -62,7 +62,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td class="text-center" colspan="7">
+                                <td class="text-center" colspan="8">
                                     <h3>Nessuna istruzione :(</h3>
                                 </td>
                             </tr>
