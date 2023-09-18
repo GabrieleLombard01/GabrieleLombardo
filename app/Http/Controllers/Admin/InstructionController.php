@@ -31,7 +31,15 @@ class InstructionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $instruction = new Instruction();
+
+        $instruction->fill($data);
+
+        $instruction->save();
+
+        return to_route('admin.instructions.show', $instruction)->with('alert-type', 'success')->with('alert-message', "Istruzione inserita con successo!");
     }
 
     /**

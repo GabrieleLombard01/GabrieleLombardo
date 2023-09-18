@@ -31,7 +31,15 @@ class ExperienceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $experience = new Experience();
+
+        $experience->fill($data);
+
+        $experience->save();
+
+        return to_route('admin.experiences.show', $experience)->with('alert-type', 'success')->with('alert-message', "Esperienza inserita con successo!");
     }
 
     /**

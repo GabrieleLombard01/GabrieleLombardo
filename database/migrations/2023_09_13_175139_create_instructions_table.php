@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('instructions', function (Blueprint $table) {
             $table->id();
             $table->string('title', 50);
-            $table->text('description');
+            $table->text('description')->default('Nessuna descrizione');
             $table->string('image')->nullable;
             $table->string('qualification_study', 50);
             $table->string('course_study', 80);

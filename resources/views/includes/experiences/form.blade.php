@@ -30,8 +30,8 @@
                 </div>
 
                 <div class="col-12">
-                    <label for="content" class="mt-3 form-label">Descrizione</label>
-                    <textarea class="form-control" id="content" name="content" rows="5" required>{{ old('content') }}</textarea>
+                    <label for="description" class="mt-3 form-label">Descrizione</label>
+                    <textarea class="form-control" id="description" name="description" rows="5" required>{{ old('description') }}</textarea>
                 </div>
 
                 <div class="col-12 col-md-6">

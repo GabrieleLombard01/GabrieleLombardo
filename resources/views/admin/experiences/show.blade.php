@@ -39,7 +39,7 @@
         <div class="mt-4 mb-5 d-flex align-items-center gap-3 justify-content-center ">
 
             <a class="btn btn-secondary" href="{{ route('admin.experiences.edit', $experience) }}"><i
-                    class="fa-solid text-white fa-pen-to-square fw-bold text-white pe-2"></i></a>
+                    class="fa-solid text-white fa-pen-to-square fw-bold text-white pe-2"></i>Modifica</a>
 
             <form action="{{ route('admin.experiences.destroy', $experience) }}" method="POST" class="delete-form">
                 @csrf

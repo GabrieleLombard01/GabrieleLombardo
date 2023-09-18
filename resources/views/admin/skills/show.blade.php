@@ -31,7 +31,7 @@
         <div class="mt-4 mb-5 d-flex align-items-center gap-3 justify-content-center ">
 
             <a class="btn text-white btn-secondary" href="{{ route('admin.skills.edit', $skill) }}"><i
-                    class="fa-solid fa-pen-to-square fw-bold text-white pe-2"></i></a>
+                    class="fa-solid fa-pen-to-square fw-bold text-white pe-2"></i>Modifica</a>
             <form action="{{ route('admin.skills.destroy', $skill) }}" method="POST" class="delete-form">
                 @csrf
                 @method('DELETE')

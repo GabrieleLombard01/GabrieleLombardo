@@ -42,7 +42,7 @@
         <div class="mt-4 mb-5 d-flex align-items-center gap-3 justify-content-center ">
 
             <a class="btn btn-secondary" href="{{ route('admin.instructions.edit', $instruction) }}"><i
-                    class=" text-white fa-solid fa-pen-to-square fw-bold text-white pe-2"></i></a>
+                    class=" text-white fa-solid fa-pen-to-square fw-bold text-white pe-2"></i>Modifica</a>
             <form action="{{ route('admin.instructions.destroy', $instruction) }}" method="POST" class="delete-form">
                 @csrf
                 @method('DELETE')

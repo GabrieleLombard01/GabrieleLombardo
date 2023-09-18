@@ -31,7 +31,15 @@ class SkillController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $skill = new Skills();
+
+        $skill->fill($data);
+
+        $skill->save();
+
+        return to_route('admin.skills.show', $skill)->with('alert-type', 'success')->with('alert-message', "Competenza inserita con successo!");
     }
 
     /**
