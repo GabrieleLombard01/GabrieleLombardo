@@ -53,9 +53,9 @@ class ExperienceController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Experience $experience)
     {
-        //
+        return view('admin.experiences.edit', compact('experience'));
     }
 
     /**

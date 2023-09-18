@@ -53,9 +53,9 @@ class InstructionController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Instruction $instruction)
     {
-        //
+        return view('admin.instructions.edit', compact('instruction'));
     }
 
     /**
