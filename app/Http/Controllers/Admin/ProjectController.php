@@ -33,6 +33,23 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate(
+            [
+                'title' => 'required|string|max:50|unique:projects',
+                'content' => 'required|string',
+                'image' => 'nullable|url'
+            ],
+            [
+                'title.required' => 'Attenzione! Il titolo è obbligatorio',
+                'title.max' => 'Attenzione! Il titolo deve essere lungo massimo :max caratteri',
+                'title.unique' => "Attenzione! Il titolo $request->title esiste già",
+
+                'content.required' => 'Attenzione! Non può esistere un progetto senza contenuto',
+
+                'image.url' => "Attenzione! L'url inserito non è valido"
+            ]
+        );
+
         $data = $request->all();
 
         $project = new Project();
