@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Skills;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+
 
 class SkillController extends Controller
 {
@@ -22,8 +24,8 @@ class SkillController extends Controller
      */
     public function create()
     {
-        $Skill = new Skills();
-        return view('admin.Skills.create', compact('Skill'));
+        $skill = new Skills();
+        return view('admin.skills.create', compact('skill'));
     }
 
     /**
@@ -69,7 +71,7 @@ class SkillController extends Controller
 
         $skill->save();
 
-        return to_route('admin.skills.show', $skill)->with('alert-message', 'Progetto modificato con successo!')->with('alert-type', 'success');
+        return to_route('admin.skills.show', $skill)->with('alert-message', 'Competenza modificata con successo!')->with('alert-type', 'success');
     }
 
     /**
