@@ -31,6 +31,42 @@ class InstructionController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate(
+            [
+                'title' => 'required|string|max:50|unique:instructions',
+                'description' => 'required|string',
+                'image' => 'nullable|url',
+                'qualification_study' => 'required|string|max:50',
+                'course_study' => 'required|string|max:80',
+                'valuation' => 'required|string|max:30',
+                'start_date' => 'required|date',
+                'end_date' => 'required|date',
+
+            ],
+            [
+                'title.required' => 'Attenzione! Il titolo è obbligatorio',
+                'title.max' => 'Attenzione! Il titolo deve essere lungo massimo :max caratteri',
+                'title.unique' => "Attenzione! Il titolo $request->title esiste già",
+
+                'description.required' => "Attenzione! Non può esistere un'esperienza senza contenuto",
+
+                'image.url' => "Attenzione! L'url inserito non è valido",
+
+                'qualification_study.required' => 'Attenzione! La qualifica di studio è obbligatoria',
+                'qualification_study.max' => 'Attenzione! La qualifica di studio deve essere lunga massimo :max caratteri',
+
+                'course_study.required' => 'Attenzione! Il corso di studi è obbligatorio',
+                'course_study.max' => 'Attenzione! Il corso di studi deve essere lungo massimo :max caratteri',
+
+                'valuation.required' => 'Attenzione! La valutazione è obbligatoria',
+                'valuation.max' => 'Attenzione! La valutazione deve essere lunga massimo :max caratteri',
+
+                'start_date.required' => "Attenzione! L'inizio è obbligatorio",
+
+                'end_date.required' => 'Attenzione! La fine è obbligatoria',
+            ]
+        );
+
         $data = $request->all();
 
         $instruction = new Instruction();
