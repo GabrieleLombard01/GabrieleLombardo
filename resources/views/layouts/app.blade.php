@@ -43,6 +43,7 @@
             @yield('content')
         </main>
 
+        @include('includes.layout.toasts')
 
     </div>
     <!--SCRIPTS-->

@@ -120,6 +120,22 @@ class ProjectController extends Controller
     {
         $project->delete();
 
-        return to_route('admin.projects.index')->with('alert-type', 'success')->with('alert-message', "Progetto eliminato con successo!");
+        return to_route('admin.projects.index')
+            ->with('toast-message', "Progetto eliminato con successo!")
+            ->with('toast-button-label', 'Annulla')
+            ->with('toast-method', 'PATCH')
+            ->with('toast-route', route('admin.projects.restore', $project->id));
+    }
+
+    public function restore(string $id)
+    {
+
+        $project = Project::onlyTrashed()->findOrFail($id);
+
+        $project->restore();
+
+        return to_route('admin.projects.index')
+            ->with('alert-type', 'success')
+            ->with('alert-message', 'Progetto ripristinato con successo!');
     }
 }

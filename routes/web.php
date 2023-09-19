@@ -41,6 +41,8 @@ Route::get('/admin/projects/{project}/edit', [ProjectController::class, 'edit'])
 Route::put('/admin/projects/{project}/update', [ProjectController::class, 'update'])->middleware(['auth', 'verified'])->name('admin.projects.update');
 Route::post('/admin/projects/store', [ProjectController::class, 'store'])->middleware(['auth', 'verified'])->name('admin.projects.store');
 Route::delete('/admin/projects/{project}', [ProjectController::class, 'destroy'])->middleware(['auth', 'verified'])->name('admin.projects.destroy');
+Route::patch('/admin/projects/{projects}/restore', [ProjectController::class, 'restore'])->middleware(['auth', 'verified'])->name('admin.projects.restore');
+//Route::resource('/admin/projects', ProjectController::class)->middleware(['auth', 'verified']);
 
 //! Rotta CV Admin
 Route::get('/admin/cv', [CurriculumController::class, 'index'])->middleware(['auth', 'verified'])->name('admin.cv.index');
