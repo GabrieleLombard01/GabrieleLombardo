@@ -32,7 +32,7 @@
                 <label for="content" class="mt-3 form-label">Descrizione</label>
                 <textarea class="form-control @error('content') is-invalid @elseif(old('content')) is-valid @enderror"
                     id="content" name="content" rows="5" required>{{ old('content', $project->content) }}</textarea>
-                @error('image')
+                @error('content')
                     <div class="invalid-feedback">
                         {{ $content }}
                     </div>
