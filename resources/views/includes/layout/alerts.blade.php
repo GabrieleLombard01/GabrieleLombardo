@@ -7,8 +7,8 @@
     </div>
 @endif
 
-<div class="container mt-2 p-2">
-    @if ($errors->any())
+@if ($errors->any())
+    <div class="container mt-2 p-2">
         <div class="alert alert-danger ">
             <button type="button" class="float-end btn-close ms-5" data-bs-dismiss="alert" aria-label="Close"></button>
             <ul>
@@ -17,5 +17,5 @@
                 @endforeach
             </ul>
         </div>
-    @endif
-</div>
+    </div>
+@endif
