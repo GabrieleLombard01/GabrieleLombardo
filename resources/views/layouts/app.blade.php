@@ -37,6 +37,8 @@
 
         @include('includes.layout.header')
 
+        @include('includes.layout.alerts')
+
         <main>
             @yield('content')
         </main>
