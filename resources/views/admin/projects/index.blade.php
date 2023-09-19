@@ -5,7 +5,6 @@
 @section('content')
 
     <div class="container">
-        @include('includes.layout.alerts')
         <header class="d-flex justify-content-between align-items-center">
             <h2 class="fw-bold my-4">Progetti:</h2>
             <a class="btn btn-outline-primary fw-bold" href="{{ route('admin.projects.create') }}">Crea un nuovo progetto</a>
