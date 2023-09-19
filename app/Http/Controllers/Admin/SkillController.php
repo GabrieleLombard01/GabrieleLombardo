@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Skills;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+use Illuminate\Validation\Rule;
+
 
 
 class SkillController extends Controller
@@ -82,6 +83,23 @@ class SkillController extends Controller
      */
     public function update(Request $request, Skills $skill)
     {
+        $request->validate(
+            [
+                'title' => ['required', 'string', 'max:50', Rule::unique('projects')->ignore($skill->id)],
+                'description' => 'required|string',
+                'image' => 'nullable|url',
+            ],
+            [
+                'title.required' => 'Attenzione! Il titolo è obbligatorio',
+                'title.max' => 'Attenzione! Il titolo deve essere lungo massimo :max caratteri',
+                'title.unique' => "Attenzione! Il titolo $request->title esiste già",
+
+                'description.required' => "Attenzione! Non può esistere una competenza senza contenuto",
+
+                'image.url' => "Attenzione! L'url inserito non è valido",
+            ]
+        );
+
         $data = $request->all();
 
         $skill->update($data);
