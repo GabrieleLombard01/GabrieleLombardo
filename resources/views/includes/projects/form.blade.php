@@ -11,9 +11,15 @@
 
             <div class="col-12 col-md-6">
                 <label for="title" class="mt-3 form-label">Titolo</label>
-                <input type="text" class="form-control" id="title" name="title"
-                    value="{{ old('title', $project->title) }}" placeholder="Inserisci il titolo..." max-lenght="50"
-                    required>
+                <input type="text"
+                    class="form-control @error('title') is-invalid @elseif(old('title')) is-valid @enderror"
+                    id="title" name="title" value="{{ old('title', $project->title) }}"
+                    placeholder="Inserisci il titolo..." max-lenght="50" required>
+                @error('title')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
 
             <div class="col-12 col-md-6">
@@ -24,14 +30,27 @@
 
             <div class="col-12">
                 <label for="content" class="mt-3 form-label">Descrizione</label>
-                <textarea class="form-control" id="content" name="content" rows="5" required>{{ old('content', $project->content) }}</textarea>
+                <textarea class="form-control @error('content') is-invalid @elseif(old('content')) is-valid @enderror"
+                    id="content" name="content" rows="5" required>{{ old('content', $project->content) }}</textarea>
+                @error('image')
+                    <div class="invalid-feedback">
+                        {{ $content }}
+                    </div>
+                @enderror
             </div>
 
 
             <div class="col-12 col-md-10">
                 <label for="image" class="mt-3 form-label">Immagine</label>
-                <input type="url" class="form-control" id="image" name="image"
-                    value="{{ old('image', $project->image) }}" placeholder="Inserisci un url..." max-lenght="50">
+                <input type="url"
+                    class="form-control @error('image') is-invalid @elseif(old('image')) is-valid @enderror"
+                    id="image" name="image" value="{{ old('image', $project->image) }}"
+                    placeholder="Inserisci un url..." max-lenght="50">
+                @error('image')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
 
             <div class="col-12 col-md-2">
