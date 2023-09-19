@@ -48,7 +48,7 @@ class InstructionController extends Controller
                 'title.max' => 'Attenzione! Il titolo deve essere lungo massimo :max caratteri',
                 'title.unique' => "Attenzione! Il titolo $request->title esiste già",
 
-                'description.required' => "Attenzione! Non può esistere un'esperienza senza contenuto",
+                'description.required' => "Attenzione! Non può esistere un'istruzione senza contenuto",
 
                 'image.url' => "Attenzione! L'url inserito non è valido",
 

@@ -33,6 +33,23 @@ class SkillController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate(
+            [
+                'title' => 'required|string|max:50|unique:skills',
+                'description' => 'required|string',
+                'image' => 'nullable|url',
+            ],
+            [
+                'title.required' => 'Attenzione! Il titolo è obbligatorio',
+                'title.max' => 'Attenzione! Il titolo deve essere lungo massimo :max caratteri',
+                'title.unique' => "Attenzione! Il titolo $request->title esiste già",
+
+                'description.required' => "Attenzione! Non può esistere una competenza senza contenuto",
+
+                'image.url' => "Attenzione! L'url inserito non è valido",
+            ]
+        );
+
         $data = $request->all();
 
         $skill = new Skills();
