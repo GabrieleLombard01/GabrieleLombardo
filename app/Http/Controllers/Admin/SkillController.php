@@ -38,7 +38,7 @@ class SkillController extends Controller
             [
                 'title' => 'required|string|max:50|unique:skills',
                 'description' => 'required|string',
-                'image' => 'nullable|url',
+                'image' => 'nullable|image:jpg,jpeg,png',
             ],
             [
                 'title.required' => 'Attenzione! Il titolo è obbligatorio',
@@ -47,7 +47,7 @@ class SkillController extends Controller
 
                 'description.required' => "Attenzione! Non può esistere una competenza senza contenuto",
 
-                'image.url' => "Attenzione! L'url inserito non è valido",
+                'image.image' => "Attenzione! L'immagine inserita non è valida",
             ]
         );
 
@@ -87,7 +87,7 @@ class SkillController extends Controller
             [
                 'title' => ['required', 'string', 'max:50', Rule::unique('projects')->ignore($skill->id)],
                 'description' => 'required|string',
-                'image' => 'nullable|url',
+                'image' => 'nullable|image:jpg,jpeg,png',
             ],
             [
                 'title.required' => 'Attenzione! Il titolo è obbligatorio',
@@ -96,7 +96,7 @@ class SkillController extends Controller
 
                 'description.required' => "Attenzione! Non può esistere una competenza senza contenuto",
 
-                'image.url' => "Attenzione! L'url inserito non è valido",
+                'image.image' => "Attenzione! L'immagine inserita non è valida",
             ]
         );
 

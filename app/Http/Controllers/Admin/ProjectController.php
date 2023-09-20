@@ -38,7 +38,7 @@ class ProjectController extends Controller
             [
                 'title' => 'required|string|max:50|unique:projects',
                 'content' => 'required|string',
-                'image' => 'nullable|url'
+                'image' => 'nullable|image:jpg,jpeg,png'
             ],
             [
                 'title.required' => 'Attenzione! Il titolo è obbligatorio',
@@ -47,7 +47,7 @@ class ProjectController extends Controller
 
                 'content.required' => 'Attenzione! Non può esistere un progetto senza contenuto',
 
-                'image.url' => "Attenzione! L'url inserito non è valido"
+                'image.image' => "Attenzione! L'immagine inserita non è valida"
             ]
         );
 
@@ -89,7 +89,7 @@ class ProjectController extends Controller
             [
                 'title' => ['required', 'string', 'max:50', Rule::unique('projects')->ignore($project->id)],
                 'content' => 'required|string',
-                'image' => 'nullable|url'
+                'image' => 'nullable|image:jpg,jpeg,png'
             ],
             [
                 'title.required' => 'Attenzione! Il titolo è obbligatorio',
@@ -98,7 +98,7 @@ class ProjectController extends Controller
 
                 'content.required' => 'Attenzione! Non può esistere un progetto senza contenuto',
 
-                'image.url' => "Attenzione! L'url inserito non è valido"
+                'image.image' => "Attenzione! L'immagine inserita non è valida"
             ]
         );
 

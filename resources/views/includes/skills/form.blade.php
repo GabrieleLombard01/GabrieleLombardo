@@ -35,10 +35,9 @@
 
             <div class="col-12 col-md-10">
                 <label for="image" class="mt-3 form-label">Immagine</label>
-                <input type="url"
+                <input type="file"
                     class="form-control @error('image') is-invalid @elseif(old('image')) is-valid @enderror"
-                    id="image" name="image" value="{{ old('image', $skill->image) }}"
-                    placeholder="Inserisci un url..." max-lenght="50">
+                    id="image" name="image" placeholder="Inserisci un url..." max-lenght="50">
                 @error('image')
                     <div class="invalid-feedback">
                         {{ $message }}

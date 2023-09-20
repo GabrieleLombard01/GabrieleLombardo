@@ -37,7 +37,7 @@ class ExperienceController extends Controller
             [
                 'title' => 'required|string|max:50|unique:experiences',
                 'description' => 'required|string',
-                'image' => 'nullable|url',
+                'image' => 'nullable|image:jpg,jpeg,png',
                 'qualification' => 'required|string|max:50',
                 'contract' => 'required|string|max:80',
                 'location' => 'required|string|max:80',
@@ -52,7 +52,7 @@ class ExperienceController extends Controller
 
                 'description.required' => "Attenzione! Non può esistere un'esperienza senza contenuto",
 
-                'image.url' => "Attenzione! L'url inserito non è valido",
+                'image.image' => "Attenzione! L'immagine inserita non è valida",
 
                 'qualification.required' => 'Attenzione! La qualifica è obbligatoria',
                 'qualification.max' => 'Attenzione! La qualifica deve essere lunga massimo :max caratteri',
@@ -105,7 +105,7 @@ class ExperienceController extends Controller
             [
                 'title' => ['required', 'string', 'max:50', Rule::unique('projects')->ignore($experience->id)],
                 'description' => 'required|string',
-                'image' => 'nullable|url',
+                'image' => 'nullable|image:jpg,jpeg,png',
                 'qualification' => 'required|string|max:50',
                 'contract' => 'required|string|max:80',
                 'location' => 'required|string|max:80',
@@ -120,7 +120,7 @@ class ExperienceController extends Controller
 
                 'description.required' => "Attenzione! Non può esistere un'esperienza senza contenuto",
 
-                'image.url' => "Attenzione! L'url inserito non è valido",
+                'image.image' => "Attenzione! L'immagine inserita non è valida",
 
                 'qualification.required' => 'Attenzione! La qualifica è obbligatoria',
                 'qualification.max' => 'Attenzione! La qualifica deve essere lunga massimo :max caratteri',

@@ -37,7 +37,7 @@ class InstructionController extends Controller
             [
                 'title' => 'required|string|max:50|unique:instructions',
                 'description' => 'required|string',
-                'image' => 'nullable|url',
+                'image' => 'nullable|image:jpg,jpeg,png',
                 'qualification_study' => 'required|string|max:50',
                 'course_study' => 'required|string|max:80',
                 'valuation' => 'required|string|max:30',
@@ -52,7 +52,7 @@ class InstructionController extends Controller
 
                 'description.required' => "Attenzione! Non può esistere un'istruzione senza contenuto",
 
-                'image.url' => "Attenzione! L'url inserito non è valido",
+                'image.image' => "Attenzione! L'immagine inserita non è valida",
 
                 'qualification_study.required' => 'Attenzione! La qualifica di studio è obbligatoria',
                 'qualification_study.max' => 'Attenzione! La qualifica di studio deve essere lunga massimo :max caratteri',
@@ -105,7 +105,7 @@ class InstructionController extends Controller
             [
                 'title' => ['required', 'string', 'max:50', Rule::unique('projects')->ignore($instruction->id)],
                 'description' => 'required|string',
-                'image' => 'nullable|url',
+                'image' => 'nullable|image:jpg,jpeg,png',
                 'qualification_study' => 'required|string|max:50',
                 'course_study' => 'required|string|max:80',
                 'valuation' => 'required|string|max:30',
@@ -120,7 +120,7 @@ class InstructionController extends Controller
 
                 'description.required' => "Attenzione! Non può esistere un'istruzione senza contenuto",
 
-                'image.url' => "Attenzione! L'url inserito non è valido",
+                'image.image' => "Attenzione! L'immagine inserita non è valida",
 
                 'qualification_study.required' => 'Attenzione! La qualifica di studio è obbligatoria',
                 'qualification_study.max' => 'Attenzione! La qualifica di studio deve essere lunga massimo :max caratteri',
