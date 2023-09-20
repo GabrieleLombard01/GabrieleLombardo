@@ -34,7 +34,7 @@
                     id="content" name="content" rows="5" required>{{ old('content', $project->content) }}</textarea>
                 @error('content')
                     <div class="invalid-feedback">
-                        {{ $content }}
+                        {{ $message }}
                     </div>
                 @enderror
             </div>
