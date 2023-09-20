@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Experience;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 
 
@@ -72,6 +73,12 @@ class ExperienceController extends Controller
         $data = $request->all();
 
         $experience = new Experience();
+
+        if (array_key_exists('image', $data)) {
+
+            $img_url = Storage::putFile('experience_images', $data['image']);
+            $experience->image = $img_url;
+        };
 
         $experience->fill($data);
 

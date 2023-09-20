@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Instruction;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 
 
@@ -72,6 +73,12 @@ class InstructionController extends Controller
         $data = $request->all();
 
         $instruction = new Instruction();
+
+        if (array_key_exists('image', $data)) {
+
+            $img_url = Storage::putFile('instruction_images', $data['image']);
+            $instruction->image = $img_url;
+        };
 
         $instruction->fill($data);
 

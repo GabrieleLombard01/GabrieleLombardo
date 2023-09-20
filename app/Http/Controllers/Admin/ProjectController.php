@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 
@@ -54,6 +55,12 @@ class ProjectController extends Controller
         $data = $request->all();
 
         $project = new Project();
+
+        if (array_key_exists('image', $data)) {
+
+            $img_url = Storage::putFile('project_images', $data['image']);
+            $project->image = $img_url;
+        };
 
         $project->fill($data);
 

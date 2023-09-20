@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Skills;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 
 
@@ -54,6 +55,12 @@ class SkillController extends Controller
         $data = $request->all();
 
         $skill = new Skills();
+
+        if (array_key_exists('image', $data)) {
+
+            $img_url = Storage::putFile('skill_images', $data['image']);
+            $skill->image = $img_url;
+        };
 
         $skill->fill($data);
 
